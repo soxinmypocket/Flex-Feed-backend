@@ -22,3 +22,34 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+Domain model with attributes:
+
+ E.g.  User -< VisionBoard-< addPictureToBoard >-Pictures
+
+User :has_many visionboards, :has_many pictures through visionboards
+
+Visionboard belongs_to user,  has_many pictures
+
+Pictures has_many visionboards, has_many users through visionboards
+
+
+Models
+User: username (str)
+VisionBoard: title(str), photos(str), description(str), author(str)
+Pictures: category(str), image(str), title(str), desc(str), like(bool)
+
+Joiner:
+addPictureToBoard picture_id, visionboard_id
+
+E.g.  User -< VisionBoard-< addPictureToBoard >-Pictures
+
+User :has_many visionboards, :has_many pictures through visionboards
+
+Visionboard belongs_to user,  has_many pictures
+
+Pictures has_many visionboards, has_many users through visionboards
+
+
+for each category
+
+create a card 

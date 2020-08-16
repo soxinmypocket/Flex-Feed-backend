@@ -1,0 +1,2 @@
+class VisionboardsController < ApplicationController
+end
