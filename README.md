@@ -53,3 +53,7 @@ Pictures has_many visionboards, has_many users through visionboards
 for each category
 
 create a card 
+
+//sign in form at top
+// vision board is automatically generated 
+// add an add picture at the bottom to add more pictures to the form

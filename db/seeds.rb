@@ -22,8 +22,7 @@ User.create([
 puts "done seeding users"
 
 #VisionBoard
-Visionb
-oard.create([
+Visionboard.create([
     {
         title: "VisionBoard #1",
         photo: "photo url goes here",
@@ -43,10 +42,10 @@ puts "done seeding Visionboards"
 pic_array = [
   {
     category: "motivational",
-    image: "app/assets/beauty_!.jpg",
+    image: "https://ibb.co/FH1J2QB",
     title: "pic #1",
     description: "description goes here",
-    like: true
+    likes: 5
 
   },
   {
@@ -54,7 +53,7 @@ pic_array = [
     image: "app/assets/hair_1.jpg",
     title: "title",
     description: "description goes here",
-    like: true
+    likes: 3
 
   },
   {
@@ -62,7 +61,7 @@ pic_array = [
     image: "app/assets/skincare_1.jpg",
     title: "title",
     description: "description goes here",
-    like: true
+    likes: 9
 
   }]
 
