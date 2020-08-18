@@ -5,6 +5,7 @@ class CreateVisionboards < ActiveRecord::Migration[6.0]
       t.string :photo
       t.string :description
       t.string :author
+      t.integer :user_id
 
       t.timestamps
     end

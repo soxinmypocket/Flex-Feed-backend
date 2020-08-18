@@ -5,10 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-AddPictureToBoard.destroy_all
-User.destroy_all
-Visionboard.destroy_all
-Picture.destroy_all
+
+#AddPictureToBoard.destroy_all
+#User.destroy_all
+#Picture.destroy_all
+#Visionboard.destroy_all
+
+
 
 #Users
 User.create([
@@ -21,28 +24,11 @@ User.create([
 ])
 puts "done seeding users"
 
-#VisionBoard
-Visionboard.create([
-    {
-        title: "VisionBoard #1",
-        photo: "photo url goes here",
-        description: "description",
-        author: "visionboard author"
-    },
-    {
-        title: "VisionBoard #2",
-        photo: "photo url goes here #2",
-        description: "description #2",
-        author: "visionboard author #2"
-    }
-])
-puts "done seeding Visionboards"
-
 #Pictures
 pic_array = [
   {
     category: "motivational",
-    image: "https://ibb.co/FH1J2QB",
+    image: "https://images.pexels.com/photos/2561170/pexels-photo-2561170.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
     title: "pic #1",
     description: "description goes here",
     likes: 5
@@ -50,7 +36,7 @@ pic_array = [
   },
   {
     category: "study",
-    image: "app/assets/hair_1.jpg",
+    image: "https://images.pexels.com/photos/1661837/pexels-photo-1661837.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
     title: "title",
     description: "description goes here",
     likes: 3
@@ -58,12 +44,48 @@ pic_array = [
   },
   {
     category: "food",
-    image: "app/assets/skincare_1.jpg",
+    image: "https://images.pexels.com/photos/4153794/pexels-photo-4153794.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
     title: "title",
     description: "description goes here",
     likes: 9
 
-  }]
+  },
+  {
+    category: "study",
+    image: "https://images.pexels.com/photos/3897426/pexels-photo-3897426.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+    title: "title",
+    description: "description goes here",
+    likes: 3
+  },
+
+  {
+    category: "study",
+    image: "https://images.pexels.com/photos/918475/pexels-photo-918475.jpeg?cs=srgb&dl=pexels-oleg-magni-918475.jpg&fm=jpg",
+    title: "title",
+    description: "description goes here",
+    likes: 3
+
+  },
+  {
+    category: "study",
+    image: "https://images.pexels.com/photos/2599108/pexels-photo-2599108.jpeg?cs=srgb&dl=pexels-philip-boakye-2599108.jpg&fm=jpg",
+    title: "title",
+    description: "description goes here",
+    likes: 3
+
+  }
+]
 
 Picture.create(pic_array)
 puts "done seeding pictures"
+
+Visionboard.create([
+    {
+        title: "VisionBoard #1",
+        photo: "photo url goes here",
+        description: "description",
+        author: "visionboard author",
+        user_id: User.last
+    }
+])
+puts "done seeding Visionboards"
