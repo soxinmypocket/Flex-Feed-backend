@@ -19,6 +19,7 @@ class VisionboardsController < ApplicationController
     end
 
     def edit
+        
 
     end
 

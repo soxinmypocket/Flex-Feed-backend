@@ -85,7 +85,7 @@ Visionboard.create([
         photo: "photo url goes here",
         description: "description",
         author: "visionboard author",
-        user_id: User.last
+        user_id: User.last.id
     }
 ])
 puts "done seeding Visionboards"
