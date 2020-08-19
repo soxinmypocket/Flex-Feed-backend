@@ -6,8 +6,15 @@ class PicturesController < ApplicationController
     end
 
     def show
-            @picture = Picture.find(params[:id])
-            render json: @picture
+        @picture = Picture.find(params[:id])
+        render json: @picture
+    end
+
+    def showcomments
+        @picture = Picture.find(params[:id])
+
+        
+        render json: @picture.comments
     end
     
     def update

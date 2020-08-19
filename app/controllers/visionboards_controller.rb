@@ -9,10 +9,6 @@ class VisionboardsController < ApplicationController
         render json: @visionboard
     end
     
-    def new
-        @visionboard = Visionboard.create
-    end
-
     def create 
         @visionboard = Visionboard.create(visionboard_params)
         render json: @visionboard

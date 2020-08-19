@@ -6,10 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-#AddPictureToBoard.destroy_all
-#User.destroy_all
-#Picture.destroy_all
-#Visionboard.destroy_all
+AddPictureToBoard.destroy_all
+User.destroy_all
+Picture.destroy_all
+Visionboard.destroy_all
+Comment.destroy_all
 
 
 
@@ -76,17 +77,26 @@ pic_array = [
 Picture.create(pic_array)
 puts "done seeding pictures"
 
+
+Comment.create([
+  {content: "All my friends are jealous of me because of this shoe!", picture: Picture.first},
+  {content: "This shoe saved my love life.", picture: Picture.second},
+  {content: "Worth every penny!", picture: Picture.third},
+  {content: "All my friends are jealous of me because of this shoe!", picture: Picture.fourth},
+  {content: "This shoe saved my love life.", picture: Picture.fifth},
+  {content: "Worth every penny!", picture: Picture.second}
+])
+
+puts "done seeding comments"
+
 Visionboard.create([
     {
         title: "VisionBoard #1",
-        photo: "photo url goes here",
-        description: "description",
-        author: "visionboard author",
-        user_id: User.last.id
+        photo: [Picture.first, Picture.second],
+        user_id: User.first
     }
 ])
 puts "done seeding Visionboards"
-
 
 
 

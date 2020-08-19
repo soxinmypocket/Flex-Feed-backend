@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_15_210249) do
+ActiveRecord::Schema.define(version: 2020_08_19_054436) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,14 @@ ActiveRecord::Schema.define(version: 2020_08_15_210249) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["pictures_id"], name: "index_add_picture_to_boards_on_pictures_id"
     t.index ["visionboards_id"], name: "index_add_picture_to_boards_on_visionboards_id"
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.string "content"
+    t.bigint "picture_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["picture_id"], name: "index_comments_on_picture_id"
   end
 
   create_table "pictures", force: :cascade do |t|
@@ -52,4 +60,5 @@ ActiveRecord::Schema.define(version: 2020_08_15_210249) do
 
   add_foreign_key "add_picture_to_boards", "pictures", column: "pictures_id"
   add_foreign_key "add_picture_to_boards", "visionboards", column: "visionboards_id"
+  add_foreign_key "comments", "pictures"
 end
