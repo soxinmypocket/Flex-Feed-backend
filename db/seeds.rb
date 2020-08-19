@@ -17,9 +17,6 @@
 User.create([
     {
         name: "nyc123"
-    },
-    {
-        name: "usa123"
     }
 ])
 puts "done seeding users"
@@ -89,3 +86,11 @@ Visionboard.create([
     }
 ])
 puts "done seeding Visionboards"
+
+
+
+
+
+
+
+

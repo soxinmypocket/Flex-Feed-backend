@@ -20,7 +20,6 @@ class VisionboardsController < ApplicationController
 
     def edit
         
-
     end
 
     def update
