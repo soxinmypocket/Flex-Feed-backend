@@ -9,9 +9,9 @@ class VisionboardsController < ApplicationController
         render json: @visionboard
     end
     
-    def new
-        @visionboard = Visionboard.create
-    end
+   #def new
+    #   @visionboard = Visionboard.create
+    #end
 
     def create 
         @visionboard = Visionboard.create(visionboard_params)
@@ -30,7 +30,7 @@ class VisionboardsController < ApplicationController
     private
 
     def visionboard_params
-        params.permit(:title, :photo, :description, :author)
+        params.permit(:title, :photo, :user_id)
     end
 
 end

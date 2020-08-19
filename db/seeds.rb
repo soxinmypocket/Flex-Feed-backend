@@ -7,13 +7,17 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 #AddPictureToBoard.destroy_all
-#User.destroy_all
-#Picture.destroy_all
-#Visionboard.destroy_all
+
+
+User.destroy_all
+Picture.destroy_all
+Visionboard.destroy_all
 
 
 
 #Users
+
+
 User.create([
     {
         name: "nyc123"
@@ -82,10 +86,18 @@ puts "done seeding pictures"
 Visionboard.create([
     {
         title: "VisionBoard #1",
-        photo: "photo url goes here",
-        description: "description",
-        author: "visionboard author",
-        user_id: User.last.id
+        photo: [Picture.first, Picture.second],
+        user_id: User.first
     }
 ])
 puts "done seeding Visionboards"
+
+
+
+#shawn = User.create(name: "Shawn")
+
+#board1 = shawn.VisionBoards.create(title: "i dont even know", photo: "https://images.pexels.com/photos/918475/pexels-photo-918475.jpeg?cs=srgb&dl=pexels-oleg-magni-918475.jpg&fm=jpg", description: "description goes here", author: "me muahahah")
+
+#pic1 = Picture.create(category: "lesiure", image: "https://images.pexels.com/photos/2561170/pexels-photo-2561170.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260", title: "motivational picture", description: "description goes here", likes: 6, visionboard: board1)
+
+#puts "done seeding test data!"
