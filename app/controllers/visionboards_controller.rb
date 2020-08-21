@@ -9,10 +9,13 @@ class VisionboardsController < ApplicationController
         render json: @visionboard
     end
     
+<<<<<<< HEAD
    #def new
     #   @visionboard = Visionboard.create
     #end
 
+=======
+>>>>>>> master
     def create 
         @visionboard = Visionboard.create(visionboard_params)
         render json: @visionboard
@@ -20,7 +23,6 @@ class VisionboardsController < ApplicationController
 
     def edit
         
-
     end
 
     def update

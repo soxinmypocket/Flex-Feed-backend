@@ -6,8 +6,13 @@ class PicturesController < ApplicationController
     end
 
     def show
-            @picture = Picture.find(params[:id])
-            render json: @picture
+        @picture = Picture.find(params[:id])
+        render json: @picture
+    end
+
+    def showcomments
+        @picture = Picture.find(params[:id])
+        render json: @picture.comments
     end
     
     def update
@@ -16,21 +21,24 @@ class PicturesController < ApplicationController
         render json: @picture
     end
 
-   # def destroy
-
-   # end
-
-   def increase
-    @picture = Picture.find(params[:id])
-    @picture.update(likes: @picture.likes + 1)
-    render json: @picture
-end
-
-    #private
-
-    def picture_params
-        params.permit(:category, :image, :title, :description, :likes)
+    def destroy
+        @picture = Picture.find(params[:id])
+        @picture.destroy
+        render json: @picture
     end
+
+    def increase
+        @picture = Picture.find(params[:id])
+        @picture.update(likes: @picture.likes + 1)
+        render json: @picture
+    end
+
+
+     private
+
+     def picture_params
+         params.permit(:category, :image, :title, :description, :likes)
+     end
     
 end
 
