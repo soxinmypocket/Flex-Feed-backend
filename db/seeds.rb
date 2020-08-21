@@ -5,12 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
+#Comment.destroy_all
+Comment.destroy_all
 AddPictureToBoard.destroy_all
 User.destroy_all
 Picture.destroy_all
 Visionboard.destroy_all
-Comment.destroy_all
+
 
 
 
@@ -25,51 +26,75 @@ puts "done seeding users"
 #Pictures
 pic_array = [
   {
-    category: "motivational",
+    category: "Beauty",
     image: "https://images.pexels.com/photos/2561170/pexels-photo-2561170.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
-    title: "pic #1",
-    description: "description goes here",
-    likes: 5
+    title: "Discover Women's Hairstyles For Curly Long Hair",
+    description: "Curly long hair is always the on- trend hairstyle because it is much more outstanding and eye- catching than common straight or wavy styles.",
+    likes: 189
 
   },
   {
-    category: "study",
+    category: "Beauty",
     image: "https://images.pexels.com/photos/1661837/pexels-photo-1661837.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
-    title: "title",
-    description: "description goes here",
-    likes: 3
+    title: "Spilling The Tea On The Popular Spring Twists Protective Style",
+    description: "Passion twists 😍 Love ",
+    likes: 3597
 
   },
   {
-    category: "food",
+    category: "Beauty",
     image: "https://images.pexels.com/photos/4153794/pexels-photo-4153794.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
-    title: "title",
-    description: "description goes here",
-    likes: 9
+    title: "Water Wave Curls",
+    description: "Adorable brown hair color for medium length hair",
+    likes: 952
 
   },
   {
-    category: "study",
+    category: "Beauty",
     image: "https://images.pexels.com/photos/3897426/pexels-photo-3897426.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
-    title: "title",
-    description: "description goes here",
-    likes: 3
+    title: "Trendy Box Braids ",
+    description: "Gone are the days when everyone's braids looks the same. Nowadays, there are so many varieties of box braids popping up all over the place, it's almost hard to keep up. ",
+    likes: 789
   },
 
   {
-    category: "study",
-    image: "https://images.pexels.com/photos/918475/pexels-photo-918475.jpeg?cs=srgb&dl=pexels-oleg-magni-918475.jpg&fm=jpg",
-    title: "title",
-    description: "description goes here",
-    likes: 3
+    category: "Lifestyle",
+    image: "https://images.pexels.com/photos/4132359/pexels-photo-4132359.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+    title: "26 Things People Who Nap 'Too Much' Wish Others Understood",
+    description: "Mental Illness and Chronic Illness: When You Nap ‘Too Much’ | The Mighty #mentalhealth #chronicillness",
+    likes: 355
 
   },
   {
-    category: "study",
-    image: "https://images.pexels.com/photos/2599108/pexels-photo-2599108.jpeg?cs=srgb&dl=pexels-philip-boakye-2599108.jpg&fm=jpg",
-    title: "title",
-    description: "description goes here",
-    likes: 3
+    category: "Home",
+    image: "https://images.pexels.com/photos/930004/pexels-photo-930004.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+    title: "Comfy Corner",
+    description: "The most amazing place to read a book!",
+    likes: 378
+
+  },
+  {
+    category: "Motivational",
+    image: "https://images.pexels.com/photos/1485548/pexels-photo-1485548.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+    title: "You are beautiful 🤗",
+    description: "#post#it#note #YouAreBeautiful ",
+    likes: 789
+  },
+
+  {
+    category: "Motivational",
+    image: "https://images.pexels.com/photos/2401863/pexels-photo-2401863.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+    title: "You are worth of love",
+    description: "West Elm 'You are worthy of love' art decor",
+    likes: 995
+
+  },
+  {
+    category: "Beauty",
+    image: "https://images.pexels.com/photos/3751770/pexels-photo-3751770.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    title: "Modern Chic",
+    description: "Classic lookbook for Fall 2020",
+    likes: 378
 
   }
 ]
@@ -79,13 +104,33 @@ puts "done seeding pictures"
 
 
 Comment.create([
-  {content: "All my friends are jealous of me because of this shoe!", picture: Picture.first},
-  {content: "This shoe saved my love life.", picture: Picture.second},
-  {content: "Worth every penny!", picture: Picture.third},
-  {content: "All my friends are jealous of me because of this shoe!", picture: Picture.fourth},
-  {content: "This shoe saved my love life.", picture: Picture.fifth},
-  {content: "Worth every penny!", picture: Picture.second}
+  {content: "Wow, your hair looks amazing!", picture: Picture.first},
+  {content: "YASSSS. Your twists are on point!!", picture: Picture.second},
+  {content: "I love this style!", picture: Picture.second},
+  {content: "What conditioner did you use??", picture: Picture.second},
+  {content: "Nice!", picture: Picture.third},
+  {content: "YASSSS. Your twists are on point!!", picture: Picture.fourth},
+  {content: "Nice!", picture: Picture.fourth},
+  {content: "This is a whole MOOD 😴", picture: Picture.fifth},
+  {content: "This is giving me Urban Outfitters vibes!", picture: Picture.last}
 ])
+  puts "done seeding comments"
+
+# com_array = [{content: "So cute !", picture: Picture.id}]
+  
+
+# com_array.each do |com|
+#   Picture.Comment.create (com)
+# end
+
+puts "done seeding comment loop!!!"
+    
+  # {content: "So cute !", picture: Picture.all},
+  # {content: "So cute !", picture: Picture.all},
+  # {content: "So cute !", picture: Picture.all},
+  # {content: "So cute !", picture: Picture.all}
+
+
 
 puts "done seeding comments"
 
