@@ -98,6 +98,78 @@ pic_array = [
     description: "Classic lookbook for Fall 2020",
     likes: 378
 
+  },
+  {
+    category: "Beauty",
+    image: "https://images.pexels.com/photos/3968449/pexels-photo-3968449.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+    title: "Discover Women's Hairstyles For Curly Long Hair",
+    description: "Curly long hair is always the on- trend hairstyle because it is much more outstanding and eye- catching than common straight or wavy styles.",
+    likes: 189
+
+  },
+  {
+    category: "Travel",
+    image: "https://images.pexels.com/photos/1223650/pexels-photo-1223650.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+    title: "Summer 2019 Hot Travel Spots!",
+    description: "just on a boat! ",
+    likes: 3597
+
+  },
+  {
+    category: "Motivational",
+    image: "https://images.pexels.com/photos/4668364/pexels-photo-4668364.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+    title: "Say yes to adventure",
+    description: "Quote on post-it note",
+    likes: 952
+
+  },
+  {
+    category: "Lifestyle",
+    image: "https://images.pexels.com/photos/5080681/pexels-photo-5080681.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+    title: "Love during COVID",
+    description: " ",
+    likes: 789
+  },
+
+  {
+    category: "Home",
+    image: "https://images.pexels.com/photos/916337/pexels-photo-916337.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    title: "Bedroom Inspiration",
+    description: "Top Duvet styles for 2020.",
+    likes: 355
+
+  },
+  {
+    category: "Home",
+    image: "https://images.pexels.com/photos/930004/pexels-photo-930004.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+    title: "Comfy Corner",
+    description: "The most amazing place to read a book!",
+    likes: 378
+
+  },
+  {
+    category: "Travel",
+    image: "https://images.pexels.com/photos/1516036/pexels-photo-1516036.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+    title: "Best Travel Spots 2019",
+    description: "#travel%bridge#2019 ",
+    likes: 789
+  },
+
+  {
+    category: "lifestyle",
+    image: "https://images.pexels.com/photos/936119/pexels-photo-936119.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+    title: "Top Party Destinations 2020",
+    description: "Top party destinations Covid 19 friendly",
+    likes: 995
+
+  },
+  {
+    category: "Travel",
+    image: "https://images.pexels.com/photos/3225531/pexels-photo-3225531.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+    title: "Costa Rica- Top Villa Picks!",
+    description: "Find the best villas in Costa Rica",
+    likes: 378
+
   }
 ]
 
@@ -147,7 +219,6 @@ puts "done seeding Visionboards"
 
 
 
-<<<<<<< HEAD
 #shawn = User.create(name: "Shawn")
 
 #board1 = shawn.VisionBoards.create(title: "i dont even know", photo: "https://images.pexels.com/photos/918475/pexels-photo-918475.jpeg?cs=srgb&dl=pexels-oleg-magni-918475.jpg&fm=jpg", description: "description goes here", author: "me muahahah")
@@ -155,9 +226,3 @@ puts "done seeding Visionboards"
 #pic1 = Picture.create(category: "lesiure", image: "https://images.pexels.com/photos/2561170/pexels-photo-2561170.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260", title: "motivational picture", description: "description goes here", likes: 6, visionboard: board1)
 
 #puts "done seeding test data!"
-=======
-
-
-
-
->>>>>>> master
